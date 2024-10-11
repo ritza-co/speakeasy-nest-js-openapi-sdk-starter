@@ -41,19 +41,25 @@ npm install
 brew install speakeasy-api/homebrew-tap/speakeasy
 ```
 
-## Running the application
-
-Start the server:
-```bash
-npm run start
-```
-
-### For development
+## Running the application for development
 
 You can use the provided script to run the application in development mode. It will watch for any changes in the source code and automatically restart the server.
 
 ```bash
 npm run start:dev
+```
+
+### Creating an OpenAPI specification
+
+An OpenAPI specification `openapi.yaml` file is generated in the root directory, using JS-YAML, when the development server is started.
+
+
+## Generating an SDK using Speakeasy
+
+To generate a Speakeasy SDK run:
+
+```bash
+speakeasy quickstart
 ```
 
 ## License
