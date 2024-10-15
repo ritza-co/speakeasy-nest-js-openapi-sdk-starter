@@ -74,13 +74,6 @@ async function bootstrap() {
     credentials: true,
   });
 
-  app.enableCors({
-    origin: 'http://localhost:5173', // Vite's default port
-    methods: 'GET,POST,PUT,DELETE,OPTIONS',
-    allowedHeaders: 'Content-Type, Authorization',
-    credentials: true,
-  });
-
   await app.listen(3000);
 }
 
