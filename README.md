@@ -45,7 +45,7 @@ brew install speakeasy-api/homebrew-tap/speakeasy
 
 You can use the provided script to run the application in development mode. It will watch for any changes in the source code and automatically restart the server. 
 
-> Move the `sdk-typescript` folder to a new location before starting the dev server.
+> Move the `sdk-typescript` folder to a new location outside this project before starting the dev server.
 
 ```bash
 npm run start:dev
