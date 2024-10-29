@@ -40,10 +40,8 @@ export async function catsFindOneCat(
     | ConnectionError
   >
 > {
-  const input = request;
-
   const parsed = safeParse(
-    input,
+    request,
     (value) => operations.FindOneCatRequest$outboundSchema.parse(value),
     "Input validation failed",
   );

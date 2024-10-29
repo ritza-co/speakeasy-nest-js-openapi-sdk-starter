@@ -139,10 +139,9 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 
 <summary>Available standalone functions</summary>
 
-- [catsFindOneCat](docs/sdks/cats/README.md#findonecat)
-- [dogsFindOneDog](docs/sdks/dogs/README.md#findonedog)
-- [petsCreate](docs/sdks/pets/README.md#create)
-
+- [`catsFindOneCat`](docs/sdks/cats/README.md#findonecat) - Get cat
+- [`dogsFindOneDog`](docs/sdks/dogs/README.md#findonedog) - Get dog
+- [`petsCreate`](docs/sdks/pets/README.md#create) - Create pet
 
 </details>
 <!-- End Standalone functions [standalone-funcs] -->
