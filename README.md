@@ -23,27 +23,27 @@ Install the application on your local machine.
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/speakeasy-api/speakeasy-nestjs-example.git
-    ```
+   ```bash
+   git clone https://github.com/speakeasy-api/speakeasy-nestjs-example.git
+   ```
 
 2. Navigate into the directory:
 
-    ```bash
-    cd speakeasy-nestjs-example
-    ```
+   ```bash
+   cd speakeasy-nestjs-example
+   ```
 
 3. Install all dependencies for the application using NPM:
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 4. Install Speakeasy CLI:
 
-    ```bash
-    brew install speakeasy-api/homebrew-tap/speakeasy
-    ```
+   ```bash
+   brew install speakeasy-api/homebrew-tap/speakeasy
+   ```
 
 ## Running the application for development
 
