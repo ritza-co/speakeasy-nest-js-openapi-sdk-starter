@@ -24,6 +24,11 @@ paths:
               oneOf:
                 - $ref: '#/components/schemas/Cat'
                 - $ref: '#/components/schemas/Dog'
+              discriminator:
+                propertyName: type
+                mapping:
+                  cat: '#/components/schemas/Cat'
+                  dog: '#/components/schemas/Dog'
       responses:
         '200':
           description: ''
@@ -33,6 +38,11 @@ paths:
                 oneOf:
                   - $ref: '#/components/schemas/Cat'
                   - $ref: '#/components/schemas/Dog'
+                discriminator:
+                  propertyName: type
+                  mapping:
+                    cat: '#/components/schemas/Cat'
+                    dog: '#/components/schemas/Dog'
         '201':
           description: ''
           content:

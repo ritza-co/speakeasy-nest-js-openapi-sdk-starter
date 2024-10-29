@@ -2,18 +2,18 @@ speakeasyVersion: 1.423.1
 sources:
     SDK-OAS:
         sourceNamespace: sdk-oas
-        sourceRevisionDigest: sha256:843d073c0deb22b425be417f3fb2a91a0674e6dfafc2740182d3ed73023bf22e
-        sourceBlobDigest: sha256:acd6a46e3828f3ef6ecb35e743b700b5d21e4bf7ae7c7e97737b236266722a29
+        sourceRevisionDigest: sha256:3acb350bda076cbad71ce68c8446e077ab1f24c2b39bacd9358cb65829a0e293
+        sourceBlobDigest: sha256:31871a32914726c146d9309e157f64a8c91dabe3655f121de149780890edd5c7
         tags:
             - latest
 targets:
     sdk:
         source: SDK-OAS
         sourceNamespace: sdk-oas
-        sourceRevisionDigest: sha256:843d073c0deb22b425be417f3fb2a91a0674e6dfafc2740182d3ed73023bf22e
-        sourceBlobDigest: sha256:acd6a46e3828f3ef6ecb35e743b700b5d21e4bf7ae7c7e97737b236266722a29
+        sourceRevisionDigest: sha256:3acb350bda076cbad71ce68c8446e077ab1f24c2b39bacd9358cb65829a0e293
+        sourceBlobDigest: sha256:31871a32914726c146d9309e157f64a8c91dabe3655f121de149780890edd5c7
         codeSamplesNamespace: sdk-oas-code-samples
-        codeSamplesRevisionDigest: sha256:0a61be16a5cff3f5e781946f3e3d96336250a52fade036b05b4eab571e288ced
+        codeSamplesRevisionDigest: sha256:56f1df02db2e20b9f281b79078391482a8f94a907e7e8bba59ebe7b85cbbcb52
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
