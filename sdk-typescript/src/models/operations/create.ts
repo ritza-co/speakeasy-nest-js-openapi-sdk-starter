@@ -8,35 +8,53 @@ import * as components from "../components/index.js";
 /**
  * Create a pet cat or dog
  */
-export type CreateRequestBody = components.Cat | components.Dog;
+export type CreateRequestBody =
+  | (components.Cat & { type: "cat" })
+  | (components.Dog & { type: "dog" });
 
 export type CreatePetsResponseBody = {};
 
-export type CreateResponseBody = components.Cat | components.Dog;
+export type CreateResponseBody =
+  | (components.Cat & { type: "cat" })
+  | (components.Dog & { type: "dog" });
 
 export type CreateResponse =
   | CreatePetsResponseBody
-  | components.Cat
-  | components.Dog;
+  | (components.Cat & { type: "cat" })
+  | (components.Dog & { type: "dog" });
 
 /** @internal */
 export const CreateRequestBody$inboundSchema: z.ZodType<
   CreateRequestBody,
   z.ZodTypeDef,
   unknown
-> = z.union([components.Cat$inboundSchema, components.Dog$inboundSchema]);
+> = z.union([
+  components.Cat$inboundSchema.and(
+    z.object({ type: z.literal("cat") }).transform((v) => ({ type: v.type })),
+  ),
+  components.Dog$inboundSchema.and(
+    z.object({ type: z.literal("dog") }).transform((v) => ({ type: v.type })),
+  ),
+]);
 
 /** @internal */
 export type CreateRequestBody$Outbound =
-  | components.Cat$Outbound
-  | components.Dog$Outbound;
+  | (components.Cat$Outbound & { type: "cat" })
+  | (components.Dog$Outbound & { type: "dog" });
 
 /** @internal */
 export const CreateRequestBody$outboundSchema: z.ZodType<
   CreateRequestBody$Outbound,
   z.ZodTypeDef,
   CreateRequestBody
-> = z.union([components.Cat$outboundSchema, components.Dog$outboundSchema]);
+> = z.union([
+  components.Cat$outboundSchema.and(
+    z.object({ type: z.literal("cat") }).transform((v) => ({ type: v.type })),
+  ),
+  components.Dog$outboundSchema.and(
+    z.object({ type: z.literal("dog") }).transform((v) => ({ type: v.type })),
+  ),
+]);
 
 /**
  * @internal
@@ -86,19 +104,33 @@ export const CreateResponseBody$inboundSchema: z.ZodType<
   CreateResponseBody,
   z.ZodTypeDef,
   unknown
-> = z.union([components.Cat$inboundSchema, components.Dog$inboundSchema]);
+> = z.union([
+  components.Cat$inboundSchema.and(
+    z.object({ type: z.literal("cat") }).transform((v) => ({ type: v.type })),
+  ),
+  components.Dog$inboundSchema.and(
+    z.object({ type: z.literal("dog") }).transform((v) => ({ type: v.type })),
+  ),
+]);
 
 /** @internal */
 export type CreateResponseBody$Outbound =
-  | components.Cat$Outbound
-  | components.Dog$Outbound;
+  | (components.Cat$Outbound & { type: "cat" })
+  | (components.Dog$Outbound & { type: "dog" });
 
 /** @internal */
 export const CreateResponseBody$outboundSchema: z.ZodType<
   CreateResponseBody$Outbound,
   z.ZodTypeDef,
   CreateResponseBody
-> = z.union([components.Cat$outboundSchema, components.Dog$outboundSchema]);
+> = z.union([
+  components.Cat$outboundSchema.and(
+    z.object({ type: z.literal("cat") }).transform((v) => ({ type: v.type })),
+  ),
+  components.Dog$outboundSchema.and(
+    z.object({ type: z.literal("dog") }).transform((v) => ({ type: v.type })),
+  ),
+]);
 
 /**
  * @internal
@@ -120,14 +152,21 @@ export const CreateResponse$inboundSchema: z.ZodType<
   unknown
 > = z.union([
   z.lazy(() => CreatePetsResponseBody$inboundSchema),
-  z.union([components.Cat$inboundSchema, components.Dog$inboundSchema]),
+  z.union([
+    components.Cat$inboundSchema.and(
+      z.object({ type: z.literal("cat") }).transform((v) => ({ type: v.type })),
+    ),
+    components.Dog$inboundSchema.and(
+      z.object({ type: z.literal("dog") }).transform((v) => ({ type: v.type })),
+    ),
+  ]),
 ]);
 
 /** @internal */
 export type CreateResponse$Outbound =
   | CreatePetsResponseBody$Outbound
-  | components.Cat$Outbound
-  | components.Dog$Outbound;
+  | (components.Cat$Outbound & { type: "cat" })
+  | (components.Dog$Outbound & { type: "dog" });
 
 /** @internal */
 export const CreateResponse$outboundSchema: z.ZodType<
@@ -136,7 +175,14 @@ export const CreateResponse$outboundSchema: z.ZodType<
   CreateResponse
 > = z.union([
   z.lazy(() => CreatePetsResponseBody$outboundSchema),
-  z.union([components.Cat$outboundSchema, components.Dog$outboundSchema]),
+  z.union([
+    components.Cat$outboundSchema.and(
+      z.object({ type: z.literal("cat") }).transform((v) => ({ type: v.type })),
+    ),
+    components.Dog$outboundSchema.and(
+      z.object({ type: z.literal("dog") }).transform((v) => ({ type: v.type })),
+    ),
+  ]),
 ]);
 
 /**

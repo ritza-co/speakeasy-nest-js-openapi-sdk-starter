@@ -27,6 +27,13 @@ export class PetsController {
   @ApiBody({
     schema: {
       oneOf: [{ $ref: getSchemaPath(Cat) }, { $ref: getSchemaPath(Dog) }],
+      discriminator: {
+        propertyName: 'type',
+        mapping: {
+          cat: getSchemaPath(Cat),
+          dog: getSchemaPath(Dog),
+        },
+      },
     },
     description: 'Create a pet cat or dog',
   })
@@ -45,6 +52,13 @@ export class PetsController {
     status: 201,
     schema: {
       oneOf: [{ $ref: getSchemaPath(Cat) }, { $ref: getSchemaPath(Dog) }],
+      discriminator: {
+        propertyName: 'type',
+        mapping: {
+          cat: getSchemaPath(Cat),
+          dog: getSchemaPath(Dog),
+        },
+      },
     },
   })
   @ApiForbiddenResponse({ status: 403, description: 'Forbidden' })

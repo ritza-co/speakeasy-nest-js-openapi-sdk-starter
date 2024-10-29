@@ -1,16 +1,16 @@
 lockVersion: 2.0.0
-id: 08ee7812-c6f8-4551-ab80-f28acfcd5a35
+id: 6945c1ee-61c0-4149-83cb-c36e9266a6b3
 management:
-  docChecksum: 417b29511534133a6144a51d17a20a39
+  docChecksum: c0db88a9bd340ed80dbfed3b11725ac4
   docVersion: "1.0"
-  speakeasyVersion: 1.405.6
-  generationVersion: 2.428.1
-  releaseVersion: 0.0.1
-  configChecksum: 437e28a2ac1b2ada6ec33696083cb272
+  speakeasyVersion: 1.423.1
+  generationVersion: 2.442.11
+  releaseVersion: 0.0.2
+  configChecksum: cf326adb81744e54055da33a7d2d6c45
 features:
   typescript:
     additionalDependencies: 0.1.0
-    core: 3.18.1
+    core: 3.18.2
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
     enumUnions: 0.1.0
@@ -20,6 +20,7 @@ features:
     responseFormat: 0.2.3
     retries: 2.83.0
     sdkHooks: 0.1.0
+    tests: 0.7.0
     unions: 2.85.7
 generatedFiles:
   - .devcontainer/README.md

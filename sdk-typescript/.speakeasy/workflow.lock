@@ -1,26 +1,33 @@
-speakeasyVersion: 1.405.6
+speakeasyVersion: 1.423.1
 sources:
-    sdk -OAS:
-        sourceNamespace: sdk--oas
-        sourceRevisionDigest: sha256:e48888f31b5ae3586606dee20741535c180e66ca9c65620f851a3051d3f91095
-        sourceBlobDigest: sha256:9de7e874e1a86c0e7c430fc89d8b427943da4b3a62c60e1e7ca7dbee0ca377cc
+    SDK-OAS:
+        sourceNamespace: sdk-oas
+        sourceRevisionDigest: sha256:3acb350bda076cbad71ce68c8446e077ab1f24c2b39bacd9358cb65829a0e293
+        sourceBlobDigest: sha256:31871a32914726c146d9309e157f64a8c91dabe3655f121de149780890edd5c7
         tags:
             - latest
 targets:
     sdk:
-        source: sdk -OAS
-        sourceNamespace: sdk--oas
-        sourceRevisionDigest: sha256:e48888f31b5ae3586606dee20741535c180e66ca9c65620f851a3051d3f91095
-        sourceBlobDigest: sha256:9de7e874e1a86c0e7c430fc89d8b427943da4b3a62c60e1e7ca7dbee0ca377cc
+        source: SDK-OAS
+        sourceNamespace: sdk-oas
+        sourceRevisionDigest: sha256:3acb350bda076cbad71ce68c8446e077ab1f24c2b39bacd9358cb65829a0e293
+        sourceBlobDigest: sha256:31871a32914726c146d9309e157f64a8c91dabe3655f121de149780890edd5c7
+        codeSamplesNamespace: sdk-oas-code-samples
+        codeSamplesRevisionDigest: sha256:56f1df02db2e20b9f281b79078391482a8f94a907e7e8bba59ebe7b85cbbcb52
 workflow:
     workflowVersion: 1.0.0
+    speakeasyVersion: latest
     sources:
-        sdk -OAS:
+        SDK-OAS:
             inputs:
-                - location: ..\openapi.yaml
+                - location: ../openapi.yaml
             registry:
-                location: registry.speakeasyapi.dev/ritza-rzx/ritza/sdk--oas
+                location: registry.speakeasyapi.dev/ritza-rzx/ritza/sdk-oas
     targets:
         sdk:
             target: typescript
-            source: sdk -OAS
+            source: SDK-OAS
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/ritza-rzx/ritza/sdk-oas-code-samples
+                blocking: false
